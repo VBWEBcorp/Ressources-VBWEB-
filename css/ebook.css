@@ -299,9 +299,11 @@
 }
 
 .ebook-container {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 6rem 2rem 8rem;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 5rem 2rem;
+    position: relative;
 }
 
 .ebook-header {
@@ -329,7 +331,7 @@
     padding: 2rem;
     background-color: var(--primary-color);
     box-shadow: var(--card-shadow);
-    margin-top: 3rem;
+    margin-top: auto;
     border: 1px solid rgba(78, 186, 236, 0.1);
 }
 
@@ -531,7 +533,11 @@ img[alt="VBWEB Logo"] {
 
     .ebook-footer {
         padding: 1.5rem;
-        margin-top: 2rem;
+        margin-top: auto;
+    }
+
+    .ebook-container {
+        padding: 4rem 1.5rem 2rem;
     }
 
     .contact-info {
@@ -576,7 +582,12 @@ img[alt="VBWEB Logo"] {
 
     .ebook-footer {
         padding: 1.2rem;
-        margin-top: 1.5rem;
+        margin-top: auto;
+    }
+
+    .ebook-container {
+        padding: 3rem 1rem 1.5rem;
+        min-height: 100vh;
     }
 }
 
