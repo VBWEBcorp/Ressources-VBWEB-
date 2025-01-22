@@ -6,6 +6,7 @@
     <title>VBWEB - Ressources</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/modal.css">
     <style>
         :root {
             --primary-color: #1a2b42;
@@ -13,6 +14,9 @@
             --text-primary: #ffffff;
             --text-secondary: rgba(255, 255, 255, 0.7);
             --card-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+            --secondary-color: #3498db;
+            --text-color: #333;
+            --background-color: #f5f6fa;
         }
 
         body {
@@ -125,22 +129,43 @@
             font-size: 1.1rem;
         }
 
-        .page-header {
-            text-align: center;
-            margin-bottom: 3rem;
+        .site-header {
+            padding: 0.75rem 2rem;
+            background-color: var(--primary-color);
+            position: relative;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
         }
 
-        .page-header h1 {
+        .logo {
+            width: 100px;
+            height: auto;
+            transition: transform 0.3s ease;
+            margin: 0;
+        }
+
+        .logo:hover {
+            transform: scale(1.05);
+        }
+
+        .main-content {
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        .site-title {
+            color: #fff;
+            margin: 0;
             font-size: 2.5rem;
             font-weight: 600;
-            margin: 0;
-            color: var(--text-primary);
         }
 
-        .page-header .subtitle {
-            font-size: 1.1rem;
-            color: var(--text-secondary);
-            margin-top: 0.5rem;
+        .site-subtitle {
+            color: #fff;
+            opacity: 0.8;
+            margin: 0.5rem 0 0;
+            font-size: 1.2rem;
         }
 
         .discovery-call {
@@ -187,12 +212,11 @@
     </style>
 </head>
 <body>
+    <div class="main-content">
+        <h1 class="site-title">Ressources VBWEB</h1>
+        <p class="site-subtitle">Des guides pratiques pour développer votre présence en ligne</p>
+    </div>
     <div class="container">
-        <header class="page-header">
-            <h1>Ressources VBWEB</h1>
-            <p class="subtitle">Des guides pratiques pour développer votre présence en ligne</p>
-        </header>
-
         <div class="resources-grid">
             <div class="resource-card">
                 <div class="card-header">
@@ -213,7 +237,7 @@
                         <span>Méthodes d'évaluation des résultats</span>
                     </li>
                 </ul>
-                <a href="ebook-seo.html" class="cta-button">
+                <a href="#" class="cta-button" onclick="showModal('seo')">
                     <i class="fas fa-book-open"></i>
                     Découvrir le guide
                 </a>
@@ -221,8 +245,8 @@
 
             <div class="resource-card">
                 <div class="card-header">
-                    <h2 class="card-title">Boostez votre projet grâce au digital</h2>
-                    <p class="card-description">Guide complet des services web : création de sites, SEO et développement sur mesure</p>
+                    <h2 class="card-title">Guide des services</h2>
+                    <p class="card-description">Boostez votre projet grâce au digital</p>
                 </div>
                 <ul class="feature-list">
                     <li class="feature-item">
@@ -238,7 +262,7 @@
                         <span>Développement d'outils sur mesure</span>
                     </li>
                 </ul>
-                <a href="ebook-services.html" class="cta-button">
+                <a href="#" class="cta-button" onclick="showModal('services')">
                     <i class="fas fa-book-open"></i>
                     Découvrir le guide
                 </a>
@@ -246,8 +270,68 @@
         </div>
     </div>
 
+    <!-- Modal pour l'e-book SEO -->
+    <div id="modal-seo" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Accéder à l'E-book SEO</h2>
+                <span class="close" onclick="closeModal('seo')">&times;</span>
+            </div>
+            <form onsubmit="handleSubmit(event, 'seo')">
+                <div class="form-group">
+                    <label for="firstname-seo">Prénom</label>
+                    <input type="text" id="firstname-seo" name="firstname" required>
+                </div>
+                <div class="form-group">
+                    <label for="lastname-seo">Nom</label>
+                    <input type="text" id="lastname-seo" name="lastname" required>
+                </div>
+                <div class="form-group">
+                    <label for="email-seo">Email</label>
+                    <input type="email" id="email-seo" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone-seo">Téléphone</label>
+                    <input type="tel" id="phone-seo" name="phone" required>
+                </div>
+                <div class="error-message"></div>
+                <button type="submit" class="submit-btn">Accéder à l'E-book</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal pour l'e-book Services -->
+    <div id="modal-services" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Boostez votre projet grâce au digital</h2>
+                <span class="close" onclick="closeModal('services')">&times;</span>
+            </div>
+            <form onsubmit="handleSubmit(event, 'services')">
+                <div class="form-group">
+                    <label for="firstname-services">Prénom</label>
+                    <input type="text" id="firstname-services" name="firstname" required>
+                </div>
+                <div class="form-group">
+                    <label for="lastname-services">Nom</label>
+                    <input type="text" id="lastname-services" name="lastname" required>
+                </div>
+                <div class="form-group">
+                    <label for="email-services">Email</label>
+                    <input type="email" id="email-services" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone-services">Téléphone</label>
+                    <input type="tel" id="phone-services" name="phone" required>
+                </div>
+                <div class="error-message"></div>
+                <button type="submit" class="submit-btn">Accéder à l'E-book</button>
+            </form>
+        </div>
+    </div>
+
     <footer>
-        <a href="https://calendly.com/vbweb" target="_blank" class="cta-button discovery-call">
+        <a href="https://tidycal.com/vbweb/rdv" target="_blank" class="cta-button discovery-call">
             <i class="fas fa-calendar-check"></i>
             Réserver un appel découverte
         </a>
@@ -265,7 +349,11 @@
                 vbweb.fr
             </a>
         </div>
-        <p> 2024 VBWEB. Tous droits réservés.</p>
+        <p> 2025 VBWEB. Tous droits réservés.</p>
     </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+    <script src="js/modal.js"></script>
 </body>
 </html>

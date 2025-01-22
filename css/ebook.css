@@ -262,25 +262,21 @@
 
 .nav-buttons {
     display: flex;
-    gap: 1.5rem;
+    gap: 1rem;
     align-items: center;
 }
 
 .nav-link {
+    color: var(--text-primary);
+    text-decoration: none;
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    color: white;
-    text-decoration: none;
-    font-weight: 500;
-    padding: 0.5rem 1rem;
-    border-radius: 8px;
-    transition: all 0.3s ease;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: color 0.3s ease;
 }
 
 .nav-link:hover {
-    background: rgba(255, 255, 255, 0.1);
+    color: var(--accent-color);
     transform: translateY(-1px);
 }
 
@@ -301,6 +297,11 @@
 
 .nav-button i {
     font-size: 1.1rem;
+}
+
+.nav-right {
+    width: 100px;
+    height: 40px;
 }
 
 .ebook-container {
@@ -412,6 +413,10 @@
 
 .privacy-link:hover {
     color: var(--accent-color);
+}
+
+img[alt="VBWEB Logo"] {
+    display: none;
 }
 
 @media (max-width: 1024px) {

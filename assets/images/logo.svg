@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 40">
+    <!-- VB -->
+    <path fill="#3498db" d="M0 5 L20 35 L40 5 L32 5 L20 28 L8 5 Z"/>
+    <path fill="#3498db" d="M45 5 L70 5 C78 5 85 12 85 20 C85 28 78 35 70 35 L45 35 Z M55 13 L55 27 L65 27 C70 27 75 24 75 20 C75 16 70 13 65 13 Z"/>
+    <!-- WEB -->
+    <path fill="#ffffff" d="M95 5 L110 35 L125 15 L140 35 L155 5 L145 5 L135 25 L125 5 L115 25 L105 5 Z"/>
+    <path fill="#ffffff" d="M160 5 L160 35 L180 35 L180 28 L168 28 L168 22 L178 22 L178 15 L168 15 L168 12 L180 12 L180 5 Z"/>
+    <path fill="#ffffff" d="M185 5 L210 5 C218 5 225 12 225 20 C225 28 218 35 210 35 L185 35 Z M195 13 L195 27 L205 27 C210 27 215 24 215 20 C215 16 210 13 205 13 Z"/>
+</svg>
