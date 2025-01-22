@@ -138,24 +138,24 @@
 /* Mobile */
 @media (max-width: 768px) {
     .modal-content {
-        width: 85%;
-        margin: 10% auto;
-        padding: 25px 20px;
+        width: 90%;
+        margin: 10% 5%;
+        padding: 25px;
     }
 }
 
 @media (max-width: 480px) {
     .modal-content {
-        width: 85%;
-        margin: 15% 20px;
+        width: 90%;
+        margin: 15% 5%;
         padding: 20px;
     }
 }
 
 @media (max-width: 360px) {
     .modal-content {
-        width: 85%;
-        margin: 10% 15px;
-        padding: 20px 15px;
+        width: 90%;
+        margin: 10% 5%;
+        padding: 20px;
     }
 }
