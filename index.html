@@ -184,93 +184,6 @@
         .contact-link:hover {
             color: var(--accent-color);
         }
-
-        /* Styles pour le modal */
-        .modal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.7);
-            backdrop-filter: blur(5px);
-            z-index: 1000;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-
-        .modal.show {
-            display: flex;
-            opacity: 1;
-        }
-
-        .modal-content {
-            background: #fff;
-            width: 90%;
-            max-width: 500px;
-            margin: auto;
-            padding: 2rem;
-            border-radius: 16px;
-            position: relative;
-            transform: translateY(-20px);
-            transition: transform 0.3s ease;
-        }
-
-        .modal.show .modal-content {
-            transform: translateY(0);
-        }
-
-        .modal h2 {
-            color: var(--primary-color);
-            margin: 0 0 1rem;
-            font-size: 1.5rem;
-        }
-
-        .modal p {
-            color: var(--text-secondary);
-            margin-bottom: 2rem;
-        }
-
-        .form-group {
-            margin-bottom: 1rem;
-        }
-
-        .form-group input {
-            width: 100%;
-            padding: 0.75rem 1rem;
-            border: 1px solid rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-            font-size: 1rem;
-            transition: border-color 0.3s ease;
-        }
-
-        .form-group input:focus {
-            outline: none;
-            border-color: var(--accent-color);
-        }
-
-        .submit-button {
-            width: 100%;
-            padding: 1rem;
-            background: var(--accent-color);
-            color: white;
-            border: none;
-            border-radius: 8px;
-            font-size: 1rem;
-            font-weight: 500;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 0.5rem;
-            transition: all 0.3s ease;
-        }
-
-        .submit-button:hover {
-            background: #3da8d8;
-            transform: translateY(-2px);
-        }
     </style>
 </head>
 <body>
@@ -300,7 +213,7 @@
                         <span>Méthodes d'évaluation des résultats</span>
                     </li>
                 </ul>
-                <a href="assets/ebooks/guide-seo.html" class="cta-button ebook-link">
+                <a href="ebook-seo.html" class="cta-button">
                     <i class="fas fa-book-open"></i>
                     Découvrir le guide
                 </a>
@@ -325,34 +238,11 @@
                         <span>Développement d'outils sur mesure</span>
                     </li>
                 </ul>
-                <a href="assets/ebooks/guide-services.html" class="cta-button ebook-link">
+                <a href="ebook-services.html" class="cta-button">
                     <i class="fas fa-book-open"></i>
                     Découvrir le guide
                 </a>
             </div>
-        </div>
-    </div>
-
-    <!-- Modal d'authentification -->
-    <div id="authModal" class="modal">
-        <div class="modal-content">
-            <h2>Accéder à l'e-book</h2>
-            <p>Veuillez remplir ce formulaire pour accéder à l'e-book.</p>
-            <form id="authForm">
-                <div class="form-group">
-                    <input type="text" id="firstname" name="firstname" placeholder="Prénom" required>
-                </div>
-                <div class="form-group">
-                    <input type="text" id="lastname" name="lastname" placeholder="Nom" required>
-                </div>
-                <div class="form-group">
-                    <input type="email" id="email" name="email" placeholder="Email" required>
-                </div>
-                <div class="form-group">
-                    <input type="tel" id="phone" name="phone" placeholder="Téléphone" required>
-                </div>
-                <button type="submit" class="submit-button">Accéder à l'e-book</button>
-            </form>
         </div>
     </div>
 
