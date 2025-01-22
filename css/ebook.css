@@ -329,7 +329,7 @@
     padding: 2rem;
     background-color: var(--primary-color);
     box-shadow: var(--card-shadow);
-    margin-top: 4rem;
+    margin-top: 3rem;
     border: 1px solid rgba(78, 186, 236, 0.1);
 }
 
@@ -531,7 +531,7 @@ img[alt="VBWEB Logo"] {
 
     .ebook-footer {
         padding: 1.5rem;
-        margin-top: 3rem;
+        margin-top: 2rem;
     }
 
     .contact-info {
@@ -572,6 +572,11 @@ img[alt="VBWEB Logo"] {
         padding: 0 2rem;
         font-size: 0.95rem;
         line-height: 1.5;
+    }
+
+    .ebook-footer {
+        padding: 1.2rem;
+        margin-top: 1.5rem;
     }
 }
 
