@@ -13,19 +13,19 @@
 .modal-content {
     background-color: #314A68;
     color: #fff;
-    margin: 10% auto;
+    margin: 15% auto;
     padding: 30px;
     border: none;
     width: 90%;
-    max-width: 500px;
+    max-width: 400px;
     border-radius: 15px;
     position: relative;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .modal-header {
-    margin-bottom: 25px;
     text-align: center;
+    margin-bottom: 25px;
 }
 
 .modal-header h2 {
@@ -65,14 +65,15 @@
 
 .form-group input {
     width: 100%;
+    border-radius: 8px;
     padding: 12px;
     border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: 8px;
     box-sizing: border-box;
     background-color: rgba(255, 255, 255, 0.1);
     color: #fff;
     font-family: 'Poppins', sans-serif;
     transition: all 0.3s ease;
+    font-size: 16px; /* Minimum font size to prevent zoom on iOS */
 }
 
 .form-group input:focus {
@@ -91,6 +92,7 @@
     padding: 12px 24px;
     border: none;
     border-radius: 8px;
+    font-weight: 500;
     cursor: pointer;
     width: 100%;
     font-family: 'Poppins', sans-serif;
@@ -115,4 +117,32 @@
     border-radius: 4px;
     background-color: rgba(231, 76, 60, 0.1);
     text-align: center;
+}
+
+/* Tablet and up */
+@media (min-width: 768px) {
+    .modal-content {
+        margin: 10% auto;
+        max-width: 450px;
+    }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+    .modal-content {
+        margin: 8% auto;
+        max-width: 500px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .form-group input {
+        font-size: 16px; /* Keep minimum font size on mobile */
+    }
+    
+    .modal-content {
+        margin: 10% auto;
+        padding: 20px;
+    }
 }

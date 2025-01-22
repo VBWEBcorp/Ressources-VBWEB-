@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Guide pratique du SEO - Booster son trafic et décupler ses ventes</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -49,8 +49,8 @@
 
     <div class="ebook-container">
         <header class="ebook-header">
-            <h1>Guide pratique du SEO</h1>
-            <p class="subtitle">Booster son trafic et décupler ses ventes !</p>
+            <h1 class="ebook-title">Guide SEO</h1>
+            <p class="ebook-subtitle">Des guides pratiques pour développer votre présence en ligne</p>
         </header>
 
         <div class="chapters">
@@ -143,45 +143,48 @@
         <div class="navigation-controls">
             <button class="nav-button prev" id="prevChapter" disabled>
                 <i class="fas fa-chevron-left"></i>
-                Chapitre précédent
+                <span>Chapitre précédent</span>
             </button>
-            <div class="chapter-indicator">
-                <span id="currentChapter">1</span> / <span id="totalChapters">4</span>
+            <div class="chapter-counter">
+                <span id="currentChapter">1/4</span>
             </div>
             <button class="nav-button next" id="nextChapter">
-                Chapitre suivant
+                <span>Chapitre suivant</span>
                 <i class="fas fa-chevron-right"></i>
             </button>
         </div>
 
         <footer class="ebook-footer">
+            <div class="cta-section">
+                <a href="https://calendly.com/vbweb" target="_blank" class="cta-button">
+                    <i class="fas fa-calendar-check"></i>
+                    Réserver un appel découverte
+                </a>
+            </div>
+
+            <div class="contact-info">
+                <a href="mailto:contact@vbweb.fr" class="contact-link">
+                    <i class="fas fa-envelope"></i>
+                    contact@vbweb.fr
+                </a>
+                <a href="tel:0627301788" class="contact-link">
+                    <i class="fas fa-phone"></i>
+                    06 27 30 17 88
+                </a>
+                <a href="https://vbweb.fr" target="_blank" class="contact-link">
+                    <i class="fas fa-globe"></i>
+                    vbweb.fr
+                </a>
+            </div>
+
             <div class="footer-content">
-                <div class="cta-section">
-                    <a href="https://calendly.com/vbweb" target="_blank" class="cta-button">
-                        <i class="fas fa-calendar-check"></i>
-                        Réserver un appel découverte
-                    </a>
-                </div>
-                <div class="contact-info">
-                    <a href="mailto:contact@vbweb.fr" class="contact-link">
-                        <i class="fas fa-envelope"></i>
-                        contact@vbweb.fr
-                    </a>
-                    <span class="separator">|</span>
-                    <a href="tel:0627301788" class="contact-link">
-                        <i class="fas fa-phone"></i>
-                        06 27 30 17 88
-                    </a>
-                    <span class="separator">|</span>
-                    <a href="https://vbweb.fr" target="_blank" class="contact-link">
-                        <i class="fas fa-globe"></i>
-                        vbweb.fr
-                    </a>
-                </div>
-                <div class="legal">
-                    <p class="copyright"> 2024 VBWEB. Tous droits réservés.</p>
-                    <a href="#" class="privacy-link">Mentions légales</a>
-                </div>
+                <p>2024 VBWEB. Tous droits réservés.</p>
+                <p><a href="mentions-legales.html">Mentions légales</a></p>
+            </div>
+
+            <div class="footer-url">
+                <i class="fas fa-lock"></i>
+                ressources-vbweb.vercel.app
             </div>
         </footer>
     </div>
