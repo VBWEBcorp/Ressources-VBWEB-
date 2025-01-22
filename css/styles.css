@@ -219,6 +219,16 @@ body {
     margin: 1rem 0;
 }
 
+.nav-text {
+    display: inline;
+}
+
+@media (max-width: 768px) {
+    .nav-text {
+        display: none;
+    }
+}
+
 @media (max-width: 360px) {
     .resources-grid {
         width: 90%;
