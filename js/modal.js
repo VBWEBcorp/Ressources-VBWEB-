@@ -15,7 +15,7 @@ const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY)
 function showModal(ebookType) {
     const modal = document.getElementById(`modal-${ebookType}`);
     if (modal) {
-        modal.style.display = "block";
+        modal.classList.add('show');
     }
 }
 
@@ -23,14 +23,14 @@ function showModal(ebookType) {
 function closeModal(ebookType) {
     const modal = document.getElementById(`modal-${ebookType}`);
     if (modal) {
-        modal.style.display = "none";
+        modal.classList.remove('show');
     }
 }
 
 // Fermer le modal si on clique en dehors
 window.onclick = function(event) {
     if (event.target.classList.contains('modal')) {
-        event.target.style.display = "none";
+        event.target.classList.remove('show');
     }
 }
 
